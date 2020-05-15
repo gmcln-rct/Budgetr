@@ -4,6 +4,8 @@ import './App.scss';
 
 import Header from './components/Header';
 import InputForm from './components/InputForm';
+import ExpenseSavings from './components/ExpenseSavings';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
 
       <Header/>
       <InputForm />
+      <ExpenseSavings />
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -10,8 +10,15 @@ const InputForm = () => {
             max="100"
             value="50"
             class="slider"
-            id="myRange"
+            id="range-slide"
           />
+          <input
+            type="number"
+            value="50"
+            placeholder="Income"
+            id="income-amount"
+          />
+          <input type="submit" value="See Budget" />
         </form>
       </div>
     );
