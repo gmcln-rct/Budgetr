@@ -3,14 +3,14 @@ import logo from './logo.svg';
 import './App.scss';
 
 import Header from './components/Header';
-import ExpenseSlider from './components/ExpenseSlider';
+import InputForm from './components/InputForm';
 
 function App() {
   return (
     <div className="App">
 
       <Header/>
-      <ExpenseSlider />
+      <InputForm />
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
