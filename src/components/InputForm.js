@@ -11,7 +11,8 @@ const InputForm = () => {
 
 
     useEffect(() => {
-    setExpense(income * range * 0.01 * ( 1/12) )
+    setExpense(income * range * 0.01 * ( 1/12) );
+    setSavings(income - expense)
   }, [income, range]);
 
   // const [range, setRange] = useContext(BudgetContextProvider);
@@ -43,6 +44,9 @@ const InputForm = () => {
 
           <h2>
             {expense.toFixed(2)}
+          </h2>
+          <h2>
+            {savings.toFixed(2)}
           </h2>
           {/* <input type="submit" value="See Budget" /> */}
         </form>
