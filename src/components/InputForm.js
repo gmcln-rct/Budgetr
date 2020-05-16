@@ -35,10 +35,15 @@ const InputForm = () => {
           <input
             type="number"
             value={income}
+
             placeholder="Income"
             id="income-amount"
             onChange={event => setIncome(event.target.value)}
           />
+
+          <h2>
+            {expense.toFixed(2)}
+          </h2>
           {/* <input type="submit" value="See Budget" /> */}
         </form>
       </div>

@@ -6,17 +6,17 @@ import Header from './components/Header';
 import InputForm from './components/InputForm';
 import ExpenseSavings from './components/ExpenseSavings';
 
-import {BudgetContextProvider} from './context/BudgetContext';
+// import {BudgetContextProvider} from './context/BudgetContext';
 
 
 function App() {
   return (
     <div className="App">
-      <BudgetContextProvider>
+      {/* <BudgetContextProvider> */}
         <Header/>
         <InputForm />
         <ExpenseSavings />
-      </BudgetContextProvider>
+      {/* </BudgetContextProvider> */}
 
 
     </div>
