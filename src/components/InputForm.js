@@ -1,16 +1,21 @@
 import React, {useContext, useState, useEffect} from 'react'
 
+// import { BudgetContext, BudgetContextProvider } from  '../context/BudgetContext';
+
 const InputForm = () => {
 
   const [range, setRange] = useState(15);
   const [income, setIncome] = useState(0);
-
-  //   useEffect(() => {
-  //   setConvertedVal(amount * fromUnit / toUnit)
-  // }, [amount, fromUnit, toUnit]);
+  const [expense, setExpense] = useState(0);
+  const [savings, setSavings] = useState(0);
 
 
+    useEffect(() => {
+    setExpense(income * range * 0.01 * ( 1/12) )
+  }, [income, range]);
 
+  // const [range, setRange] = useContext(BudgetContextProvider);
+  // const [income, setIncome ] = useContext(BudgetContextProvider);
 
     return (
       <div>
