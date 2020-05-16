@@ -9,7 +9,7 @@ const InputForm = () => {
     return (
       <div>
         <form className="budget-input">
-          <label for="range-slider">Percentage</label>
+          <label for="range-slider">Your Percentage {range}%</label>
           <input
             type="range"
             min="0"
@@ -19,13 +19,16 @@ const InputForm = () => {
             id="range-slide"
             onChange={event => setRange(event.target.value)}
           />
+          <label for="income-amount">Enter Income</label>
+
           <input
             type="number"
-            value="50"
+            value={income}
             placeholder="Income"
             id="income-amount"
+            onChange={event => setIncome(event.target.value)}
           />
-          <input type="submit" value="See Budget" />
+          {/* <input type="submit" value="See Budget" /> */}
         </form>
       </div>
     );

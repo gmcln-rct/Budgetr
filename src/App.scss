@@ -55,14 +55,22 @@
   background-color: #999;
 
   label {
+    margin: 2vmin 0;
+
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
+    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+
+
     color: #fff;
   }
 
   input {
     margin: 1vmin auto;
     min-width: 30rem;
-
     padding: 1vmin 2vmin;
+
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
+    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
   }
 }
 
