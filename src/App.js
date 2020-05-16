@@ -6,22 +6,19 @@ import Header from './components/Header';
 import InputForm from './components/InputForm';
 import ExpenseSavings from './components/ExpenseSavings';
 
+import {BudgetContextProvider} from './context/BudgetContext';
+
 
 function App() {
   return (
     <div className="App">
+      <BudgetContextProvider>
+        <Header/>
+        <InputForm />
+        <ExpenseSavings />
+      </BudgetContextProvider>
 
-      <Header/>
-      <InputForm />
-      <ExpenseSavings />
 
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         It is being calculated.
-        </p>
-
-      </header>
     </div>
   );
 }

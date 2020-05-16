@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 
 export const BudgetContext = createContext({
     expense: 0,
