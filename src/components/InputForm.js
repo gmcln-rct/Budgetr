@@ -5,6 +5,12 @@ const InputForm = () => {
   const [range, setRange] = useState(15);
   const [income, setIncome] = useState(0);
 
+  //   useEffect(() => {
+  //   setConvertedVal(amount * fromUnit / toUnit)
+  // }, [amount, fromUnit, toUnit]);
+
+
+
 
     return (
       <div>
