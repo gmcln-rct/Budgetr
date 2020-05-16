@@ -46,8 +46,24 @@
 }
 
 .budget-input {
-  height: 100px;
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+
+  background-color: #999;
+
+  label {
+    color: #fff;
+  }
+
+  input {
+    margin: 1vmin auto;
+    min-width: 30rem;
+
+    padding: 1vmin 2vmin;
+  }
 }
 
 .expense-savings {

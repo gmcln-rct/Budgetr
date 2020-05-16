@@ -6,6 +6,11 @@ const ExpenseSavings = () => {
   const [expense, setExpense] = useState(0);
   const [savings, setSavings] = useState(0);
 
+  // useEffect(() => {
+  //   setConvertedVal(amount * fromUnit / toUnit)
+  // }, [amount, fromUnit, toUnit]);
+
+
 
     return (
       <div className="expense-savings">

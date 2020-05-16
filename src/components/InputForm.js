@@ -2,19 +2,22 @@ import React, {useContext, useState, useEffect} from 'react'
 
 const InputForm = () => {
 
+  const [range, setRange] = useState(15);
+  const [income, setIncome] = useState(0);
 
 
     return (
       <div>
         <form className="budget-input">
-          <label for="range-slider">Select Your Percentage</label>
+          <label for="range-slider">Percentage</label>
           <input
             type="range"
             min="0"
             max="30"
-            value="15"
+            value={range}
             class="slider"
             id="range-slide"
+            onChange={event => setRange(event.target.value)}
           />
           <input
             type="number"
