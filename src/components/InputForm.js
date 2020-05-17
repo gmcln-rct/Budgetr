@@ -49,7 +49,6 @@ const InputForm = () => {
           <h2>
             Monthly Savings: ${savings.toFixed(2)}
           </h2>
-          {/* <input type="submit" value="See Budget" /> */}
         </form>
       </div>
     );
