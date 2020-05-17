@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.scss';
 
@@ -14,6 +14,10 @@ function App() {
   const responseGoogle = (response) => {
     console.log(response);
   };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [url, setUrl] = useState("");
  
   return (
     <div className="App">
