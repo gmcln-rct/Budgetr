@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400;1,700&display=swap');
 @import 'styles/reset.scss';
+
 
 
 body {
@@ -14,25 +16,25 @@ body {
   width: 100%;
 }
 .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 
-  max-width: 50vw;
-  text-align: center;
+    max-width: 50vw;
+    text-align: center;
 
   .budget-input {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 
-  margin: 2vmin;
-  padding: 3vmin;
+    margin: 2vmin;
+    padding: 3vmin;
 
-  border-radius: 10px; 
-  background-color: #0568a6;
+    border-radius: 10px; 
+    background-color: #0568a6;
 
   label {
     margin: 2vmin 0 0 0;
@@ -86,7 +88,8 @@ body {
 
 
 .header-text {
-  color: red;
+
+  font-family: 'Noto Serif', serif;
   font-size: 5rem;
 }
 
