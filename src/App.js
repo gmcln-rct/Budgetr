@@ -9,17 +9,25 @@ import GoogleLogin from "react-google-login";
 
 // import {BudgetContextProvider} from './context/BudgetContext';
 
-
 function App() {
+
+  const responseGoogle = (response) => {
+    console.log(response);
+  };
+ 
   return (
     <div className="App">
-      {/* <BudgetContextProvider> */}
-        <Header/>
-        <InputForm />
-        {/* <ExpenseSavings /> */}
-      {/* </BudgetContextProvider> */}
-
-
+        <h1>Login With Google</h1>
+      <GoogleLogin
+        clientId="61293796729-0fsefe1s50otl643rp5jchbvfikui0ce.apps.googleusercontent.com"
+        buttonText="Login"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={"single_host_origin"}
+      />
+      
+      <Header />
+      <InputForm />
     </div>
   );
 }
