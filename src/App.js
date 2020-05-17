@@ -11,14 +11,18 @@ import GoogleLogin from "react-google-login";
 
 function App() {
 
-  const responseGoogle = (response) => {
-    console.log(response);
-  };
-
+  
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [url, setUrl] = useState("");
- 
+  
+  const responseGoogle = (response) => {
+    setName(response.profileObj.name);
+    setEmail(response.profileObj.email);
+    setUrl(response.profileObj.url);
+  };
+
+
   return (
     <div className="App">
         <h1>Login With Google</h1>
