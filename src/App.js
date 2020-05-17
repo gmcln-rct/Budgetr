@@ -15,7 +15,7 @@ function App() {
       {/* <BudgetContextProvider> */}
         <Header/>
         <InputForm />
-        <ExpenseSavings />
+        {/* <ExpenseSavings /> */}
       {/* </BudgetContextProvider> */}
 
 

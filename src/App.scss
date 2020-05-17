@@ -2,28 +2,63 @@
 
 
 body {
-  background-color: #3E688c;
+  background-color: #f2f2f2;
+}
+
+#root {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  width: 100%;
 }
 .App {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  margin: 0 auto;
 
   max-width: 50vw;
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .budget-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  margin: 2vmin;
+  padding: 3vmin;
+
+  border-radius: 10px; 
+  background-color: #0568a6;
+
+  label {
+    margin: 2vmin 0 0 0;
+
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
+    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+
+
+    color: #fff;
+  }
+
+  input {
+    margin: 1vmin auto;
+    // min-width: 30rem;
+    padding: 1vmin 2vmin;
+
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
+    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+
+    border-radius: 10px;
   }
 }
+}
+
+
+
 
 .App-header {
   background-color: #282c34;
@@ -55,34 +90,7 @@ body {
   font-size: 5rem;
 }
 
-.budget-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
 
-
-  background-color: #999;
-
-  label {
-    margin: 2vmin 0;
-
-    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
-
-
-    color: #fff;
-  }
-
-  input {
-    margin: 1vmin auto;
-    // min-width: 30rem;
-    padding: 1vmin 2vmin;
-
-    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
-  }
-}
 
 .expense-savings {
     height: 100px;
