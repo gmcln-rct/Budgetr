@@ -11,12 +11,13 @@ const InputForm = () => {
 
 
     useEffect(() => {
-    setExpense(income * range * 0.01 * ( 1/12) );
-    setSavings(income - expense)
+    setExpense((income/12) * range * 0.01 );
   }, [income, range]);
 
-  // const [range, setRange] = useContext(BudgetContextProvider);
-  // const [income, setIncome ] = useContext(BudgetContextProvider);
+  useEffect(() => {
+    setSavings((income / 12) * (1 - (range * 0.01)))
+  }, [income, range]);
+
 
     return (
       <div>
@@ -34,19 +35,19 @@ const InputForm = () => {
           <label for="income-amount">Enter Income</label>
 
           <input
-            type="number"
+            type="text"
             value={income}
-
+            pattern="\\$?(([1-9](\\d*|\\d{0,2}(,\\d{3})*))|0)(\\.\\d{1,2})?$" 
             placeholder="Income"
             id="income-amount"
             onChange={event => setIncome(event.target.value)}
           />
 
           <h2>
-            {expense.toFixed(2)}
+            Monthly Expense: ${expense.toFixed(2)}
           </h2>
           <h2>
-            {savings.toFixed(2)}
+            Monthly Savings: ${savings.toFixed(2)}
           </h2>
           {/* <input type="submit" value="See Budget" /> */}
         </form>
