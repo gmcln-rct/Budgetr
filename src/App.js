@@ -26,9 +26,10 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
 
       <Login />
-      <Header />
+
       <InputForm />
     </div>
   );

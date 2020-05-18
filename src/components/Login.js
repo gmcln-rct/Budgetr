@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 import GoogleLogin from "react-google-login";
 
 
-
-
 export const Login = () => {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [url, setUrl] = useState("");
+    const[loggedIn, setLoggedIn] = useState(false);
 
     const responseGoogle = (response) => {
         setName(response.profileObj.name);
         setEmail(response.profileObj.email);
         setUrl(response.profileObj.url);
+        setLoggedIn(true);
     };
-    
+
     return (
         <div>
             <h1>Login With Google</h1>
@@ -24,8 +24,13 @@ export const Login = () => {
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
+                className="google-login"
                 cookiePolicy={"single_host_origin"}
             />
+
+
+
+            <p>Hello {name}</p>
         </div>
     )
 }
