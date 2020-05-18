@@ -3,7 +3,11 @@
 
 
 body {
-  background-color: #f2f2f2;
+  background: rgb(85,85,85);
+  background: -moz-radial-gradient(circle, rgba(85,85,85,1) 0%, rgba(51,51,51,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(85,85,85,1) 0%, rgba(51,51,51,1) 100%);
+  background: radial-gradient(circle, rgba(85,85,85,1) 0%, rgba(51,51,51,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#555555",endColorstr="#333333",GradientType=1);
 }
 
 #root {
@@ -25,16 +29,25 @@ body {
     text-align: center;
 
     .app-hub {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-content: center;
+
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
   
         margin: 2vmin;
         padding: 3vmin;
   
         border-radius: 10px; 
         background-color: #0568a6;
+
+        -webkit-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
+        -moz-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
+        box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
       .budget-input {
         display: flex;
         flex-direction: column;
