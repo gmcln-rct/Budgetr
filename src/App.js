@@ -29,8 +29,8 @@ function App() {
       <GoogleLogin
         clientId="61293796729-0fsefe1s50otl643rp5jchbvfikui0ce.apps.googleusercontent.com"
         buttonText="Login"
-        onSuccess={this.responseGoogle}
-        onFailure={this.responseGoogle}
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
       />
       
