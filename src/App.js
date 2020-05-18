@@ -26,14 +26,18 @@ function App() {
 
   return (
     <div className="App">
+      <section className="app-hub">
+
+          <Header />
       <BudgetContextProvider>
 
-      <Header />
 
-      <Login />
+          <Login />
 
-      <InputForm />
+          <InputForm />
       </BudgetContextProvider>
+      </section>
+
     </div>
   );
 }

@@ -7,13 +7,14 @@ body {
 }
 
 #root {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
 
   width: 100%;
 }
+
 .App {
     display: flex;
     flex-direction: column;
@@ -23,38 +24,51 @@ body {
     max-width: 50vw;
     text-align: center;
 
-  .budget-input {
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    .app-hub {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+  
+        margin: 2vmin;
+        padding: 3vmin;
+  
+        border-radius: 10px; 
+        background-color: #0568a6;
+      .budget-input {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-content: center;
+  
+        // margin: 2vmin;
+        // padding: 3vmin;
+  
+        // border-radius: 10px; 
+        // background-color: #0568a6;
+  
+      label {
+        margin: 2vmin 0 0 0;
+  
+        font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
+        line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+  
+  
+        color: #fff;
+      }
+  
+      input {
+        margin: 1vmin auto;
+        // min-width: 30rem;
+        padding: 1vmin 2vmin;
+  
+        font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
+        line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+  
+        border-radius: 10px;
+    }
 
-    margin: 2vmin;
-    padding: 3vmin;
-
-    border-radius: 10px; 
-    background-color: #0568a6;
-
-  label {
-    margin: 2vmin 0 0 0;
-
-    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
-
-
-    color: #fff;
-  }
-
-  input {
-    margin: 1vmin auto;
-    // min-width: 30rem;
-    padding: 1vmin 2vmin;
-
-    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-    line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
-
-    border-radius: 10px;
-  }
+    }       
 }
 }
 
