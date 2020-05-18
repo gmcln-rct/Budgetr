@@ -48,6 +48,7 @@ body {
         -webkit-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
         -moz-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
         box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
+
       .budget-input {
         display: flex;
         flex-direction: column;
@@ -87,36 +88,11 @@ body {
 
 
 
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
 .header-text {
-
   font-family: 'Noto Serif', serif;
-  font-size: 5rem;
+  font-size: calc(28px + (64 - 28) * ((100vw - 300px) / (1800 - 300)));
+  line-height: calc(32px + (68 - 32) * ((100vw - 300px) / (1800 - 300)));
+  color: #fff;
 }
 
 

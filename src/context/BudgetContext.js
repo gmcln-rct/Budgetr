@@ -23,8 +23,8 @@ export function BudgetContextProvider(props) {
             setName(name);
             // setDictionary(dictionaryList[selectedLanguage.id]);
         },
-        setLoggedIn : (value) => {
-            setLoggedIn(value);
+        setLoggedIn : (loggedIn) => {
+            setLoggedIn(loggedIn);
         }
     };
 
