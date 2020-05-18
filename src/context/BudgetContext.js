@@ -6,6 +6,7 @@ export const BudgetContext = createContext({
     expense: 0,
     savings: 0,
     name: "",
+    loggedIn: false,
 });
 
 //  export const BudgetContextProvider;
@@ -13,6 +14,7 @@ export const BudgetContext = createContext({
 export function BudgetContextProvider(props) {
     const budgetContext = useContext(BudgetContext);
     const [name, setName] = useState(budgetContext.name);
+    const [loggedIn, setLoggedIn] = useState(budgetContext.loggedIn);
     // const [dictionary, setDictionary] = useState(languageContext.dictionary);
 
     const provider = {
@@ -20,6 +22,9 @@ export function BudgetContextProvider(props) {
         setName: (name) => {
             setName(name);
             // setDictionary(dictionaryList[selectedLanguage.id]);
+        },
+        setLoggedIn : (value) => {
+            setLoggedIn(value);
         }
     };
 

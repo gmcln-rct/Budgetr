@@ -16,7 +16,7 @@ export const Login = () => {
         budgetContext.setName(response.profileObj.name);
         setEmail(response.profileObj.email);
         setUrl(response.profileObj.url);
-        setLoggedIn(true);
+        budgetContext.setLoggedIn(true);
     };
 
     return (
