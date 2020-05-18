@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import GoogleLogin from "react-google-login";
 
+import {BudgetContext} from '../context/BudgetContext';
 
 export const Login = () => {
 
-    const [name, setName] = useState("");
+    const budgetContext = useContext(BudgetContext);
+
+    // const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [url, setUrl] = useState("");
     const[loggedIn, setLoggedIn] = useState(false);
 
     const responseGoogle = (response) => {
-        setName(response.profileObj.name);
+        budgetContext.setName(response.profileObj.name);
         setEmail(response.profileObj.email);
         setUrl(response.profileObj.url);
         setLoggedIn(true);
@@ -30,7 +33,7 @@ export const Login = () => {
 
 
 
-            <p>Hello {name}</p>
+            <p>Hello {budgetContext.name}</p>
         </div>
     )
 }

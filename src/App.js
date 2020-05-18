@@ -8,7 +8,7 @@ import ExpenseSavings from './components/ExpenseSavings';
 import GoogleLogin from "react-google-login";
 import {Login} from "./components/Login";
 
-// import {BudgetContextProvider} from './context/BudgetContext';
+import {BudgetContextProvider} from './context/BudgetContext';
 
 function App() {
 
@@ -26,11 +26,14 @@ function App() {
 
   return (
     <div className="App">
+      <BudgetContextProvider>
+
       <Header />
 
       <Login />
 
       <InputForm />
+      </BudgetContextProvider>
     </div>
   );
 }

@@ -5,9 +5,30 @@ export const BudgetContext = createContext({
     income: 0,
     expense: 0,
     savings: 0,
+    name: "",
 });
 
- export const BudgetContextProvider;
+//  export const BudgetContextProvider;
+
+export function BudgetContextProvider(props) {
+    const budgetContext = useContext(BudgetContext);
+    const [name, setName] = useState(budgetContext.name);
+    // const [dictionary, setDictionary] = useState(languageContext.dictionary);
+
+    const provider = {
+        name,
+        setName: (name) => {
+            setName(name);
+            // setDictionary(dictionaryList[selectedLanguage.id]);
+        }
+    };
+
+    return (
+        <BudgetContext.Provider value={provider}>
+            {props.children}
+        </BudgetContext.Provider>
+    );
+};
 
 //     // const budgetContext = useContext(BudgetContext);
 //     // const [range, setRange] = useState(15);
