@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react';
 import GoogleLogin from "react-google-login";
 
-const [name, setName] = useState("");
-const [email, setEmail] = useState("");
-const [url, setUrl] = useState("");
 
-const responseGoogle = (response) => {
-    setName(response.profileObj.name);
-    setEmail(response.profileObj.email);
-    setUrl(response.profileObj.url);
-};
 
 
 export const Login = () => {
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [url, setUrl] = useState("");
+
+    const responseGoogle = (response) => {
+        setName(response.profileObj.name);
+        setEmail(response.profileObj.email);
+        setUrl(response.profileObj.url);
+    };
+    
     return (
         <div>
             <h1>Login With Google</h1>
