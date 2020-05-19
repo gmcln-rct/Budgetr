@@ -11,10 +11,7 @@ const InputForm = () => {
 
   const budgetContext = useContext(BudgetContext);
 
-  const {name } = budgetContext;
-
-  console.log(budgetContext.loggedIn);
-
+  const {name} = budgetContext;
 
 
     useEffect(() => {
@@ -29,7 +26,7 @@ const InputForm = () => {
     return (
       <div>
         <p>Hello {name}</p>
-        <p>{budgetContext.loggedIn}</p>
+
         <form className="budget-input">
           <label for="range-slider">Your Percentage {range}%</label>
           <input
