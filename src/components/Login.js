@@ -10,7 +10,7 @@ export const Login = () => {
     // const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [url, setUrl] = useState("");
-    const[loggedIn, setLoggedIn] = useState(false);
+    // const[loggedIn, setLoggedIn] = useState(false);
 
     const responseGoogle = (response) => {
         budgetContext.setName(response.profileObj.name);
@@ -20,7 +20,7 @@ export const Login = () => {
     };
 
     return (
-        <div>
+        <div className="login-container">
             <h1>Login With Google</h1>
             <GoogleLogin
                 clientId="61293796729-0fsefe1s50otl643rp5jchbvfikui0ce.apps.googleusercontent.com"
@@ -31,9 +31,6 @@ export const Login = () => {
                 cookiePolicy={"single_host_origin"}
             />
 
-
-
-            <p>Hello {budgetContext.name}</p>
         </div>
     )
 }

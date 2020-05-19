@@ -1,6 +1,6 @@
 import React, {useContext, useState, useEffect} from 'react'
 
-// import { BudgetContext, BudgetContextProvider } from  '../context/BudgetContext';
+import { BudgetContext } from  '../context/BudgetContext';
 
 const InputForm = () => {
 
@@ -9,6 +9,15 @@ const InputForm = () => {
   const [expense, setExpense] = useState(0);
   const [savings, setSavings] = useState(0);
 
+  const budgetContext = useContext(BudgetContext);
+
+  const {name, loggedIn } = budgetContext;
+
+let dog = "";
+
+if (loggedIn) {
+  let dog = "cats are bad"
+}
 
     useEffect(() => {
     setExpense((income/12) * range * 0.01 );
@@ -21,6 +30,8 @@ const InputForm = () => {
 
     return (
       <div>
+        <p>Hello {name}</p>
+        <p>{dog}</p>
         <form className="budget-input">
           <label for="range-slider">Your Percentage {range}%</label>
           <input

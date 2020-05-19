@@ -12,20 +12,19 @@ export const BudgetContext = createContext({
 //  export const BudgetContextProvider;
 
 export function BudgetContextProvider(props) {
+
     const budgetContext = useContext(BudgetContext);
     const [name, setName] = useState(budgetContext.name);
     const [loggedIn, setLoggedIn] = useState(budgetContext.loggedIn);
-    // const [dictionary, setDictionary] = useState(languageContext.dictionary);
 
     const provider = {
         name,
         setName: (name) => {
             setName(name);
-            // setDictionary(dictionaryList[selectedLanguage.id]);
         },
-        setLoggedIn : (loggedIn) => {
+        setLoggedIn: (loggedIn) => {
             setLoggedIn(loggedIn);
-        }
+        },
     };
 
     return (
