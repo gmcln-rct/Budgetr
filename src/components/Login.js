@@ -7,15 +7,15 @@ export const Login = () => {
 
     const budgetContext = useContext(BudgetContext);
 
-    // const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [url, setUrl] = useState("");
-    // const[loggedIn, setLoggedIn] = useState(false);
+
 
     const responseGoogle = (response) => {
         budgetContext.setName(response.profileObj.name);
         setEmail(response.profileObj.email);
         setUrl(response.profileObj.url);
+
         budgetContext.setLoggedIn(true);
     };
 

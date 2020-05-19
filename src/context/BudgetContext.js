@@ -6,7 +6,7 @@ export const BudgetContext = createContext({
     expense: 0,
     savings: 0,
     name: "",
-    loggedIn: false,
+    loggedIn: ""
 });
 
 //  export const BudgetContextProvider;

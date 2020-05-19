@@ -1,5 +1,4 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.scss';
 
 import Header from './components/Header';
@@ -29,9 +28,7 @@ function App() {
       <section className="app-hub">
 
           <Header />
-      <BudgetContextProvider>
-
-
+          <BudgetContextProvider>
           <Login />
 
           <InputForm />
