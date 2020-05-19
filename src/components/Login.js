@@ -19,7 +19,7 @@ export const Login = () => {
     };
 
     if (budgetContext.loggedIn) {
-        return <p>Welcome to your monttnly budget, {budgetContext.name}</p>
+        return <p className="welcome-text">Welcome to your montnly budget, {budgetContext.name}</p>
     }
 
     return (
