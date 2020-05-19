@@ -12,15 +12,6 @@ const InputForm = () => {
 
   const budgetContext = useContext(BudgetContext);
 
-
-
-  // let dog;
-  // if (budgetContext.loggedIn) {
-  //   dog = "Yes loogedin";
-  // } else {
-  //   dog = "No logged out";
-  // }
-
     useEffect(() => {
     setExpense((income/12) * range * 0.01 );
   }, [income, range]);
@@ -53,8 +44,12 @@ const InputForm = () => {
 
           <label htmlFor="income-amount">Enter Income</label>
 
+
+
           <input
-            type="text"
+            type="number"
+                min="0" 
+            step="1"
             value={income}
             placeholder="Income"
             id="income-amount"
