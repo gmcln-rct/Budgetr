@@ -12,8 +12,6 @@ const InputForm = () => {
 
   const budgetContext = useContext(BudgetContext);
 
-  const {name} = budgetContext;
-
 
     useEffect(() => {
     setExpense((income/12) * range * 0.01 );

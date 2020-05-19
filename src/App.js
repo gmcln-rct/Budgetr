@@ -12,22 +12,25 @@ import {BudgetContext, BudgetContextProvider} from './context/BudgetContext';
 function App() {
 
   const budgetContext = useContext(BudgetContext);
-  const {loggedIn} = budgetContext;
+  const login = budgetContext.loggedIn;
 
-  console.log(budgetContext.loggedIn);
+
+
 
   return (
     <div className="App">
-      <section className="app-hub">
+      <main className="app-hub">
           <Header />
           <BudgetContextProvider>
 
-              <Login />
+            <Login />
+
+          <p> Loggedin? {budgetContext.loggedIn}</p>
 
               <InputForm />
 
       </BudgetContextProvider>
-      </section>
+      </main>
 
     </div>
   );
