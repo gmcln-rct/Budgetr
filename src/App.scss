@@ -57,6 +57,8 @@ body {
 
           h1 {
             margin: 2vmin 0;
+            font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1800 - 300)));
+            line-height: calc(18px + (28 - 18) * ((100vw - 300px) / (1800 - 300)));
             color: #fff;
           }
 
