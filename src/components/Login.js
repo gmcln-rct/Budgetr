@@ -18,18 +18,23 @@ export const Login = () => {
         budgetContext.setLoggedIn(true);
     };
 
-    console.log(budgetContext.loggedIn);
+    if (budgetContext.loggedIn) {
+        return <p>Welcome to your monttnly budget, {budgetContext.name}</p>
+    }
+
     return (
         <div className="login-container">
-            <h1>Login With Google</h1>
-            <GoogleLogin
-                clientId="61293796729-0fsefe1s50otl643rp5jchbvfikui0ce.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                className="google-login"
-                cookiePolicy={"single_host_origin"}
-            />
+                <div>
+                    <h1>Login With Google</h1>
+                    <GoogleLogin
+                        clientId="61293796729-0fsefe1s50otl643rp5jchbvfikui0ce.apps.googleusercontent.com"
+                        buttonText="Login"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        className="google-login"
+                        cookiePolicy={"single_host_origin"}
+                    />
+                </div>
         </div>
     )
 }

@@ -1,11 +1,11 @@
 import React, {useContext} from 'react';
-import './App.scss';
 
 import Header from './components/Header';
 import InputForm from './components/InputForm';
 import {Login} from "./components/Login";
 import ExpenseSavings from './components/ExpenseSavings';
 
+import './App.scss';
 
 import {BudgetContext, BudgetContextProvider} from './context/BudgetContext';
 
@@ -21,11 +21,11 @@ function App() {
       <section className="app-hub">
           <Header />
           <BudgetContextProvider>
-            {loggedIn ? (
+
               <Login />
-              ) : (
+
                 <InputForm />
-            )}
+
       </BudgetContextProvider>
       </section>
 

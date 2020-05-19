@@ -1,11 +1,9 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 
 // import { BudgetContext, BudgetContextProvider } from '../context/BudgetContext';
 const ExpenseSavings = () => {
-  // const {expense} = useContext(BudgetContextProvider.expense);
 
-  // const [expense, setExpense] = useState(0);
-  // const [savings, setSavings] = useState(0);
+
 
   // useEffect(() => {
   //   setConvertedVal(amount * fromUnit / toUnit)
