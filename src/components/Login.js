@@ -15,10 +15,10 @@ export const Login = () => {
         budgetContext.setName(response.profileObj.name);
         setEmail(response.profileObj.email);
         setUrl(response.profileObj.url);
-
         budgetContext.setLoggedIn(true);
     };
 
+    console.log(budgetContext.loggedIn);
     return (
         <div className="login-container">
             <h1>Login With Google</h1>
@@ -30,7 +30,6 @@ export const Login = () => {
                 className="google-login"
                 cookiePolicy={"single_host_origin"}
             />
-
         </div>
     )
 }

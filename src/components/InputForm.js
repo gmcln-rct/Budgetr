@@ -11,13 +11,11 @@ const InputForm = () => {
 
   const budgetContext = useContext(BudgetContext);
 
-  const {name, loggedIn } = budgetContext;
+  const {name } = budgetContext;
 
-let dog = "";
+  console.log(budgetContext.loggedIn);
 
-if (loggedIn) {
-  let dog = "cats are bad"
-}
+
 
     useEffect(() => {
     setExpense((income/12) * range * 0.01 );
@@ -31,7 +29,7 @@ if (loggedIn) {
     return (
       <div>
         <p>Hello {name}</p>
-        <p>{dog}</p>
+        <p>{budgetContext.loggedIn}</p>
         <form className="budget-input">
           <label for="range-slider">Your Percentage {range}%</label>
           <input
