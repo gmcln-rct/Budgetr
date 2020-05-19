@@ -9,10 +9,9 @@ import './App.scss';
 
 import {BudgetContext, BudgetContextProvider} from './context/BudgetContext';
 
-function App() {
 
-  const budgetContext = useContext(BudgetContext);
-  const login = budgetContext.loggedIn;
+
+function App() {
 
 
 
@@ -25,7 +24,7 @@ function App() {
 
             <Login />
 
-          <p> Loggedin? {budgetContext.loggedIn}</p>
+          {/* <p> Loggedin? {dog}</p> */}
 
               <InputForm />
 
