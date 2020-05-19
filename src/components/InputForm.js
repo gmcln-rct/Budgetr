@@ -1,4 +1,5 @@
 import React, {useContext, useState, useEffect} from 'react'
+import NumberFormat from "react-number-format";
 
 import { BudgetContext } from  '../context/BudgetContext';
 
@@ -36,25 +37,44 @@ const InputForm = () => {
             value={range}
             className="slider"
             id="range-slide"
-            onChange={event => setRange(event.target.value)}
+            onChange={(event) => setRange(event.target.value)}
           />
           <label htmlFor="income-amount">Enter Income</label>
 
           <input
             type="text"
             value={income}
-
             placeholder="Income"
             id="income-amount"
-            onChange={event => setIncome(event.target.value)}
+            onChange={(event) => setIncome(event.target.value)}
           />
 
-          <h2>
-            Monthly Expense: ${expense.toFixed(2)}
-          </h2>
-          <h2>
-            Monthly Savings: ${savings.toFixed(2)}
-          </h2>
+          <div className="expense-container">
+            <h2> Monthly Expense:</h2>
+
+            <NumberFormat
+              className="currency-number"
+              value={expense}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              decimalScale={2}
+              renderText={(value) => <div>{value}</div>}
+            />
+          </div>
+          <div className="expense-container">
+            <h2> Monthly Savings:</h2>
+
+            <NumberFormat
+              className="currency-number"
+              value={savings}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              decimalScale={2}
+              renderText={(value) => <div>{value}</div>}
+            />
+          </div>
         </form>
       </div>
     );
