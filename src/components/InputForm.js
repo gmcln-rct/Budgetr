@@ -37,10 +37,9 @@ const InputForm = () => {
     return (
       <div>
 
-
+        <hr></hr>
         <form className="budget-input">
-          <h2>Election Amount</h2>
-          <label htmlFor="range-slider">Select Percentage {range}%</label>
+          <label htmlFor="range-slider">Select Election % </label>
           <input
             type="range"
             min="0"
@@ -50,6 +49,8 @@ const InputForm = () => {
             id="range-slide"
             onChange={(event) => setRange(event.target.value)}
           />
+          <p>{range}%</p>
+
           <label htmlFor="income-amount">Enter Income</label>
 
           <input
@@ -61,7 +62,7 @@ const InputForm = () => {
           />
 
           <div className="expense-container">
-            <h2> Monthly Expense:</h2>
+            <h3> Monthly Expense:</h3>
 
             <NumberFormat
               className="currency-number"
@@ -74,7 +75,7 @@ const InputForm = () => {
             />
           </div>
           <div className="expense-container">
-            <h2> Monthly Savings:</h2>
+            <h3> Monthly Savings:</h3>
 
             <NumberFormat
               className="currency-number"
