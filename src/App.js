@@ -27,8 +27,8 @@ function App() {
 
 
             <InputForm />
-            <ExpenseSavings />
 
+            <Button />
       </BudgetContextProvider>
       </main>
 
