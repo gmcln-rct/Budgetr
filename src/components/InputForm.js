@@ -12,13 +12,13 @@ const InputForm = () => {
 
   const budgetContext = useContext(BudgetContext);
 
-    useEffect(() => {
-    setExpense((income/12) * range * 0.01 );
-  }, [income, range]);
-
-    useEffect(() => {
-      setSavings((income / 12) * (1 - (range * 0.01)))
+      useEffect(() => {
+      setExpense((income/12) * range * 0.01 );
     }, [income, range]);
+
+      useEffect(() => {
+        setSavings((income / 12) * (1 - (range * 0.01)))
+      }, [income, range]);
 
 
     if (!budgetContext.loggedIn) {

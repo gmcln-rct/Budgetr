@@ -4,6 +4,7 @@ import Header from './components/Header';
 import InputForm from './components/InputForm';
 import {Login} from "./components/Login";
 import ExpenseSavings from './components/ExpenseSavings';
+import {Button} from './components/Button';
 
 import './App.scss';
 
