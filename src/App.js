@@ -24,9 +24,9 @@ function App() {
 
             <Login />
 
-          {/* <p> Loggedin? {dog}</p> */}
 
-              <InputForm />
+            <InputForm />
+            <ExpenseSavings />
 
       </BudgetContextProvider>
       </main>

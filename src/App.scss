@@ -57,8 +57,17 @@ body {
         -moz-box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
         box-shadow: 10px 14px 24px 0px rgba(0,0,0,0.48);
 
-        .login-container {
 
+        .header-text {
+          font-family: 'Noto Serif', serif;
+          font-size: calc(28px + (68 - 28) * ((100vw - 300px) / (1800 - 300)));
+          line-height: calc(32px + (72 - 32) * ((100vw - 300px) / (1800 - 300)));
+          letter-spacing: 2px;
+          color: #fff;
+        }
+
+
+        .login-container {
 
           h1 {
             margin: 2vmin 0;
@@ -107,20 +116,16 @@ body {
         label {
           margin: 2vmin 0 0 0;
     
-          font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-          line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+          font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1800 - 300)));
+          line-height: calc(22px + (32 - 22) * ((100vw - 300px) / (1800 - 300)));
           font-weight: 700;
 
-          // color: #fff;
-          // #income-amount {
-          //   font-weight: 500;
-          // }
         }
 
         p {
           padding: 0;
-          font-size: calc(14px + (28 - 14) * ((100vw - 300px) / (1800 - 300)));
-          line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+          font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1800 - 300)));
+          line-height: calc(22px + (32 - 22) * ((100vw - 300px) / (1800 - 300)));
         }
 
     
@@ -129,11 +134,13 @@ body {
           margin: 1vmin auto;
           padding: 1vmin 2vmin;
     
-          font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-          line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
+          font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1800 - 300)));
+          line-height: calc(22px + (32 - 22) * ((100vw - 300px) / (1800 - 300)));
           text-align: right;
     
           border-radius: 10px;
+
+    
 
       }
       .expense-container {
@@ -144,10 +151,8 @@ body {
 
           margin: 1vmin 0 0 0;
 
-          font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1800 - 300)));
-          line-height: calc(22px + (36 - 22) * ((100vw - 300px) / (1800 - 300)));
-
-
+          font-size: calc(18px + (28 - 18) * ((100vw - 300px) / (1800 - 300)));
+          line-height: calc(22px + (32 - 22) * ((100vw - 300px) / (1800 - 300)));
 
       }
     }
@@ -158,13 +163,6 @@ body {
 
 
 
-
-.header-text {
-  font-family: 'Noto Serif', serif;
-  font-size: calc(28px + (64 - 28) * ((100vw - 300px) / (1800 - 300)));
-  line-height: calc(32px + (68 - 32) * ((100vw - 300px) / (1800 - 300)));
-  color: #fff;
-}
 
 
 

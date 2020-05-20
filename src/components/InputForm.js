@@ -40,18 +40,16 @@ const InputForm = () => {
             id="range-slide"
             onChange={(event) => setRange(event.target.value)}
           />
-          <p>{range}%</p>
+          <p className="range-percentage">{range}%</p>
 
-          <label htmlFor="income-amount">Enter Income</label>
-
-
+          <label htmlFor="income-amount">Enter Annual Income</label>
 
           <input
-            type="number"
-                min="0" 
+            type="text"
+            min="0" 
             step="1"
             value={income}
-            placeholder="Income"
+            placeholder="$"
             id="income-amount"
             onChange={(event) => setIncome(event.target.value)}
           />

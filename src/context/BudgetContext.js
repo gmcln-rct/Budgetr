@@ -16,8 +16,18 @@ export function BudgetContextProvider(props) {
     const budgetContext = useContext(BudgetContext);
     const [name, setName] = useState(budgetContext.name);
     const [loggedIn, setLoggedIn] = useState(budgetContext.loggedIn);
+    const [expense, setExpense] = useState(budgetContext.expense);
+    const [savings, setSavings] = useState(budgetContext.savings);
 
     const provider = {
+        expense,
+        setExpense: (expense) => {
+            setExpense(expense);
+        },
+        savings,
+        setSavings: (savings) => {
+            setSavings(savings);
+        },
         name,
         setName: (name) => {
             setName(name);
