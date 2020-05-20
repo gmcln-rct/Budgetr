@@ -7,8 +7,7 @@ const ExpenseSavings = () => {
 
   const [range, setRange] = useState(15);
   const [income, setIncome] = useState(0);
-  const [expense, setExpense] = useState(0);
-  const [savings, setSavings] = useState(0);
+
 
   const budgetContext = useContext(BudgetContext);
 
