@@ -11,3 +11,12 @@ In the app, users can:
 * See the monthly savings based on the expense.
 
 The app uses Google Autherization for added security.
+
+#Installation
+
+After download:
+
+* run npm install
+* npm start
+
+Enjoy!
