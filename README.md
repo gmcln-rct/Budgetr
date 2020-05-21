@@ -12,7 +12,7 @@ In the app, users can:
 
 The app uses Google Autherization for added security.
 
-#Installation
+# Installation
 
 After download:
 
