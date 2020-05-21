@@ -10,7 +10,7 @@ const InputForm = () => {
   const [expense, setExpense] = useState(0);
   const [savings, setSavings] = useState(0);
 
-  const budgetContext = useContext(BudgetContext);
+  const budgetContext = useContext(BudgetContext);  
 
       useEffect(() => {
       setExpense((income/12) * range * 0.01 );
@@ -24,6 +24,42 @@ const InputForm = () => {
     if (!budgetContext.loggedIn) {
       return null;
     }
+
+    if (budgetContext.toggleResults) {
+      return (
+        <section>
+          <div className="expense-container">
+            <h3>Election Range:</h3>
+
+            <NumberFormat
+              className="currency-number"
+              value={range}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              decimalScale={2}
+              renderText={(value) => <div>{value}</div>}
+            />
+          </div>
+
+        <div className="expense-container">
+          <h3> Annual Income:</h3>
+
+          <NumberFormat
+            className="currency-number"
+            value={income}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"$"}
+            decimalScale={2}
+            renderText={(value) => <div>{value}</div>}
+          />
+        </div>
+
+        </section>
+      )
+    }
+  
 
     return (
       <div>
