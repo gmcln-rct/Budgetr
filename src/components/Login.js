@@ -18,10 +18,12 @@ export const Login = () => {
         budgetContext.setLoggedIn(true);
     };
 
-    if (budgetContext.loggedIn) {
+    if (budgetContext.loggedIn && !budgetContext.toggleResults) {
         return <p className="welcome-text">Welcome to your monthly budget,<br/> {budgetContext.name} <hr /></p>
     }
-
+    if (budgetContext.loggedIn && budgetContext.toggleResults) {
+        return <p className="welcome-text">Thank you,<br /> {budgetContext.name} <hr /></p>
+    }
     return (
         <div className="login-container">
                 <div>
