@@ -30,16 +30,9 @@ const InputForm = () => {
         <section>
           <div className="expense-container">
             <h3>Election Range:</h3>
+            <h4>{range}%</h4>
 
-            <NumberFormat
-              className="currency-number"
-              value={range}
-              displayType={"text"}
-              thousandSeparator={true}
-              prefix={"$"}
-              decimalScale={2}
-              renderText={(value) => <div>{value}</div>}
-            />
+
           </div>
 
         <div className="expense-container">
@@ -55,6 +48,32 @@ const InputForm = () => {
             renderText={(value) => <div>{value}</div>}
           />
         </div>
+          <div className="expense-container">
+            <h3> Monthly Expense:</h3>
+
+            <NumberFormat
+              className="currency-number"
+              value={expense}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              decimalScale={2}
+              renderText={(value) => <div>{value}</div>}
+            />
+          </div>
+          <div className="expense-container">
+            <h3> Monthly Savings:</h3>
+
+            <NumberFormat
+              className="currency-number"
+              value={savings}
+              displayType={"text"}
+              thousandSeparator={true}
+              prefix={"$"}
+              decimalScale={2}
+              renderText={(value) => <div>{value}</div>}
+            />
+          </div>
 
         </section>
       )
@@ -64,7 +83,6 @@ const InputForm = () => {
     return (
       <div>
 
-        <hr></hr>
         <form className="budget-input">
           <label htmlFor="range-slider">Select Election % </label>
           <input
